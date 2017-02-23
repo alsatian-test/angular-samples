@@ -20,9 +20,16 @@
   },
   "homepage": "https://github.com/alsatian-test/angular-samples#readme",
   "devDependencies": {
+    "@angular/common": "^2.4.8",
+    "@angular/compiler": "^2.4.8",
     "@angular/core": "^2.4.8",
+    "@angular/platform-browser": "^2.4.8",
+    "@angular/platform-browser-dynamic": "^2.4.8",
     "@types/core-js": "^0.9.35",
     "alsatian": "^1.2.1",
+    "alsatian-angular-test-shim": "^1.0.0-beta.1",
+    "core-js": "^2.4.1",
+    "jsdom": "^9.11.0",
     "rxjs": "^5.2.0",
     "typescript": "^2.2.1",
     "zone.js": "^0.7.7"

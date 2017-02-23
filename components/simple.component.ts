@@ -5,5 +5,5 @@ import { Component } from "@angular/core";
     template: "<p>I am soooooo simple</p>"
 })
 export class SimpleComponent {
-    
+
 }
