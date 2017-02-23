@@ -1,15 +1,15 @@
 import "alsatian-angular-test-shim";
 import { Setup, Teardown, Expect, Test, TestFixture } from "alsatian";
 import { TestBed, getTestBed } from "@angular/core/testing";
-import { SimpleComponent } from "./simple.component";
+import { ComponentWithExternalTemplate } from "./component-with-external-template";
 
-@TestFixture("simple component tests")
-export class SimpleComponentTests {
+@TestFixture("component with external template tests")
+export class ComponentWithExternalTemplateTests {
 
     @Setup
     private _setup() {
         TestBed.configureTestingModule({
-            declarations: [ SimpleComponent ],
+            declarations: [ ComponentWithExternalTemplate ],
         });
     }
 
@@ -18,10 +18,10 @@ export class SimpleComponentTests {
         getTestBed().resetTestingModule();
     }
 
-    @Test("simple component exists")
-    public simpleComponentExists() {
+    @Test("external template is loaded")
+    public externalTemplateIsLoaded() {
 
-        const fixture = TestBed.createComponent(SimpleComponent);
+        const fixture = TestBed.createComponent(ComponentWithExternalTemplate);
         Expect(fixture.debugElement.nativeElement.textContent).toBe("I am soooooo simple");
     }
 }
