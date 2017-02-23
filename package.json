@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alsatian-test/angular-samples/issues"
   },
-  "homepage": "https://github.com/alsatian-test/angular-samples#readme"
+  "homepage": "https://github.com/alsatian-test/angular-samples#readme",
+  "devDependencies": {
+    "typescript": "^2.2.1"
+  }
 }
