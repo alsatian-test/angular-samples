@@ -1,5 +1,5 @@
 import "alsatian-angular-test-shim";
-import { Setup, Teardown, Expect, Test, TestCase, TestFixture } from "alsatian";
+import { Setup, Teardown, Expect, AsyncTest, TestCase, TestFixture } from "alsatian";
 import { TestBed, getTestBed } from "@angular/core/testing";
 import { ComponentWithBoundProperty } from "./component-with-bound-property";
 
@@ -20,8 +20,8 @@ export class ComponentWithBoundPropertyTets {
 
     @TestCase("John")
     @TestCase("Jane")
-    @Test("property is output")
-    public propertyIsOutput(name: string) {
+    @AsyncTest("property is output")
+    public async propertyIsOutput(name: string) {
 
         const fixture = TestBed.createComponent(ComponentWithBoundProperty);
 
@@ -29,6 +29,8 @@ export class ComponentWithBoundPropertyTets {
         component.name = name;
 
         fixture.detectChanges();
+
+        await fixture.whenStable();
 
         Expect(fixture.debugElement.nativeElement.textContent).toBe("My name is: " + name);
     }
