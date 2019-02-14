@@ -9,7 +9,7 @@
       "preserveConstEnums": true,
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
-      "lib": [ "es5", "dom" ]
+      "lib": [ "es2015", "dom" ]
    },
    "buildOnSave": false,
    "compileOnSave": true,
